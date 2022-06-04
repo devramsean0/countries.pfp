@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "name": "countries.pfp",
+    "workspaces": [
+        "app/*"
+    ],
+    "scripts": {}
+ }
