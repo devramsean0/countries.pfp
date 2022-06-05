@@ -4,5 +4,18 @@
     "workspaces": [
         "app/*"
     ],
-    "scripts": {}
- }
+    "scripts": {
+        "build:api":"yarn workspace api build",
+        "build:b2-manager":"yarn workspace b2-manager build",
+        "start:api":"yarn workspace api start",
+        "start:b2-manager":"yarn workspace b2-manager start",
+        "dev:api":"yarn workspace api dev",
+        "dev:b2-manager":"yarn workspace b2-manager dev",
+        "start": "concurrently --kill-others-on-fail \"yarn run start:api\" \"yarn run start:b2-manager \"",
+        "build": "concurrently --kill-others-on-fail \"yarn run build:api\" \"yarn run build:b2-manager \"",
+        "dev": "concurrently --kill-others-on-fail \"yarn run dev:api\" \"yarn run dev:b2-manager \""
+    },
+    "dependencies": {
+        "concurrently": "^7.2.1"
+    }
+}
