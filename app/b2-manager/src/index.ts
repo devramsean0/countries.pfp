@@ -9,6 +9,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.get('/image/:country/:position', (req: Request, res: Response) => {
+  // TODO: Github Issue #5
   const country = req.params.country;
   const position = req.params.position;
   res.send(`${b2Addr}/countries/${country}/${position}.png`);
