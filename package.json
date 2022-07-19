@@ -16,6 +16,6 @@
         "dev": "concurrently --kill-others-on-fail \"yarn run dev:api\" \"yarn run dev:b2-manager \""
     },
     "dependencies": {
-        "concurrently": "7.2.2"
+        "concurrently": "7.3.0"
     }
 }
